@@ -1,0 +1,41 @@
+<%= form_for(@player) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+
+<% days = %w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday) %>
+	
+<div class="profile new">
+<%=session[:company]%>
+	<h2>Create Player Profile</h2>
+	
+	<div class="top_half">
+		<%=image_tag(@profile.picture_url.nil? ? 'empty_avatar.png' : @profile.picture_url, :class => 'profile_picture', :size => '100x100')%>
+
+		<p><%= @profile.first_name%></p>
+		<p><%= @profile.last_name%></p>
+	</div>
+	
+	<div class="company_info">
+		<div class="label"><h2>Professional<br/> Info</h2></div>
+		<p><small>Company:</small> <%= f.select :company, @company %> </p>
+		<p><small>Industry:</small> <%= f.text_field :industry, :value => session[:company][0][2] %> </p>
+		<p><small>Location:</small> <%= f.text_field :location, :value => session[:player].location.name %> </p>
+	</div>
+	
+	<div class="player_notes">
+		<div class="label"><h2>Player <br/>Notes</h2></div>
+		<p><small>Home Course:</small> <%= f.select :home_course, @courses %> </p>
+		<p><small>Handicap:</small> <%= f.text_field :handicap %> </p>
+		<p><small>Preferred Tee-Time:</small> <%= f.select :schedule, days %> </p>
+	</div>
+	<br/><br/>
+	
+	<p>Your e-mail address is only used to send you notifications from our site. We will not share your e-mail address with any user.</p>
+	<p><small>E-Mail: </small><%= f.text_field :email, :placeholder => 'Your e-mail address' %></p>
+	
+</div>
+
+<div class="center">
+<%= f.submit "Create Profile", class: "btn btn-large btn-primary"%>
+</div>
+
+<% end %>

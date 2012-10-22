@@ -1,0 +1,21 @@
+<% if session[:atoken].nil? %>
+<% else %>
+<header class="navbar navbar-fixed-top-index">
+  <div class="navbar-inner navbar-index">
+    <div class="container">
+       <nav>
+
+		<ul class="nav" style="margin-left:-10px;">
+          <li><%= link_to "Find Connected Reviews", {:controller => 'users', :action => 'index', :search => 'query_reviews'} %></li>
+          <li><%= link_to "Find Your Connections", {:controller => 'users', :action => 'index', :search => 'query_connections'} %></li>
+        </ul>
+		
+		<%= form_tag "users", :method => 'get', :class => 'navbar-search' do %>
+		  <%= text_field_tag "search", nil, :class => "search-query", :placeholder => 'Search for a person or company', :autocomplete => 'off', :data => { :provide => 'typeahead', :source => @dropdown_companies} %>
+		<% end %>
+
+	   </nav>
+	</div>
+  </div>
+</header>
+<% end %>

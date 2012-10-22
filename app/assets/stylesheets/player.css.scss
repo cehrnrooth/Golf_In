@@ -1,0 +1,105 @@
+.profile {
+	
+	.profile_picture {
+			float: left;
+			background: white;
+			padding: 5px;
+			margin-right:0px;
+			border: #eee solid 3px;
+		}
+		
+	.top_half {
+		border:1px solid #fff;
+		line-height:1em;
+		font-size:2em;
+		height:115px;
+		padding:10px;
+		margin:10px;
+		background: #eee;
+		
+		img {margin-right:20px;}
+		
+	}		
+	
+	.company_info {
+		float:left;
+		padding:20px;
+
+		height:auto;
+		width:420px;
+		
+		.label {
+			float:left;
+			height:210px;
+			width: 125px;
+			
+			margin-right:20px;
+			
+			h2 {
+				font-size:2em;
+				font-weight:bold;
+				line-height:1.5em;
+				margin-top:30px;
+				
+			}
+		}
+	}
+		
+	.player_notes {
+		float:left;
+		padding:20px;
+
+		height:230px;
+		width:420px;
+		
+		.label {
+			float:left;
+			height:210px;
+			width: 125px;
+		
+			margin-right:20px;
+		
+			h2 {
+				font-size:2em;
+				font-weight:bold;
+				line-height:1.5em;
+				margin-top:30px;
+			
+			}
+		}
+	}		
+}
+
+.show {
+	strong {font-size:2em;}
+	.top_half {float:left; width:400px;}
+	#handicap {
+		float:left;
+		height:117px;
+		width:110px;
+		margin:10px;
+		margin-left:40px;
+		padding:10px;
+		
+		h2 {
+			font-weight:bold;
+			font-size:2em;
+		}
+		
+		p {position:relative; top:-70px; left:0px; font-size:8em;}
+	}
+	.company_info {height: 400px; .label {height:400px;}}
+	.player_notes {height: 400px; .label {height:400px;}}
+}
+
+#profiles {
+	.home {
+		.top_half {
+			width:300px;
+			height:auto;
+			p {font-size:0.9em; line-height:0.9em; margin-top:10px;}
+		}
+	#handicap {margin-left:20px;}
+	#company {font-size:0.5em;}
+	}
+}

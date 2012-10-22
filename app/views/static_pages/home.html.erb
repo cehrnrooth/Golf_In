@@ -1,0 +1,61 @@
+<% if session[:atoken].nil? %>
+
+<div class="intro">
+	
+	<div class="center page-header">
+	<br/>
+	  <h2>It's not just a sport. It's a three martini lunch with golf carts.</h2>
+	</div>
+	
+	<%= render 'home_carousel' %>
+	
+</div>
+
+<% else %>
+
+<div class="row">
+	<div class="span7">	
+	<div id='profiles'>
+		<div class='profile show home'>
+			
+			<div class="page-header"><h1 style="text-align: left;">Players League</h1></div>
+				
+			<% for player in @players%>
+			<div class="top_half">
+				<%= link_to image_tag(player.picture_url.nil? ? 'empty_avatar.png' : player.picture_url, :class => 'profile_picture', :size => '50x50'), player_path(player.id)%>
+				<p><%= player.first_name%> <%= player.last_name%></p>
+				<p id="company"><%= player.company %></p>
+			</div>
+
+			<div class="label center" id="handicap">
+				<h2>Handicap</h2>
+				<p><%= player.handicap %></p>
+			</div>
+			<% end %>
+		</div>
+	</div>	
+	</div>
+	
+	<div class="span5">	
+		<div class="page-header"><h1 style="text-align: left;">Club House</h1></div>
+		
+		<% for course in @courses %>
+			<% n = [1,2,3,4].sample %>
+			
+			<div class="courses">
+			<h5><%= course.name %></h5>
+			<%= link_to image_tag("course#{n}.jpg", :class => 'course_picture', :size => '90x80'), course.link %>
+			
+			<div class="course_stats">
+				<p><%= course.holes %> Holes</p>
+				<p><%= pluralize(Player.where(:home_course => course.id).count, 'Club Member')%></p>
+			</div>			
+			
+			</div>
+		<% end %>
+		
+	</div>
+	
+</div>
+	
+<% end %>

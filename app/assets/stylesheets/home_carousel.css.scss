@@ -1,0 +1,90 @@
+.carousel {
+	.carousel-inner {
+	
+		height:430px;
+		
+		border:1px solid #eee;
+		border-left:0px;
+		
+		.item {
+			height:430px;			
+			
+			.carousel-comment {
+				float:right;
+				margin-top:20px;
+				margin-right:35px;
+				background-color:rgba(255,255,255,0.7);
+				
+				height:330px;
+				width:220px;
+				padding:20px;
+				
+				border-radius: 35px;
+				-moz-border-radius: 35px;
+				border:10px solid #eee;
+				
+				display:table;
+				p { 
+					font-size:1.2em;
+					display:table-cell;
+					vertical-align:middle;
+					
+					a {font-size:0.9em;}
+					
+				}
+				
+			}
+		}
+		
+	}
+
+	.carousel-control {
+	  top: 93%;
+	}
+}
+
+.intro {
+	.carousel {
+		.carousel-inner {
+			height: 440px;
+			
+			border-right:0px;
+			border-bottom:0px;
+			
+			h2 {color:black;}
+			
+			.btn-linkedin {
+				position:relative;
+				top:40px;
+				right:10px;
+				width:240px;
+			}
+		}
+
+		.carousel-control {
+		  top: 90%;
+		}
+	
+	}
+}
+
+.intro {
+		
+	.feature {
+		float:right;
+		
+		width: 250px;
+		height: 160px;
+		padding:10px;
+		padding-bottom:20px;
+		margin:20px 20px 30px 20px;
+		border: 1px solid #999;
+		xborder-top: 15px solid #999;
+		
+		background: #fff;
+		
+		p {margin-left:10px;}
+		h2 {text-align:left;}
+		
+		}
+}

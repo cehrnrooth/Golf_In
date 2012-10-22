@@ -1,0 +1,9 @@
+<footer class="footer">
+  <nav>
+    <ul>
+      <li><%= link_to "About ",   about_path, :rel=>'tooltip', :id=>'tooltip', :title=>'Learn About Our Team!' %></li>
+      <li><%= mail_to "admin@decisionmkr.com", "Contact", :subject => 'Feedback', :rel=>'tooltip', :id=>'tooltip', :title=>'Send Us Feedback!', :encode => 'javascript' %></li>
+	  <li><%= link_to "News", '#', :rel=>'tooltip', :id=>'tooltip', :title=>'Coming Soon - Visit Our Blog!'%></li>
+    </ul>
+  </nav>
+</footer>

@@ -1,0 +1,42 @@
+<% provide(:title, "#{@player.first_name} #{@player.last_name} Player Stats") %>
+<div class="profile show">
+	
+	<div class="top_half">
+		<%=image_tag(@player.picture_url.nil? ? 'empty_avatar.png' : @player.picture_url, :class => 'profile_picture', :size => '100x100')%>
+
+		<p><%= @player.first_name%></p>
+		<p><%= @player.last_name%></p>
+	</div>
+	
+	<div class="label center" id="handicap">
+		<h2>Handicap</h2>
+		<p><%= @player.handicap %></p>
+	</div>
+	
+	<% if !current_player?(@player) %>
+	<div class="label center" id="handicap" style="background: green">
+		<h2>Arrange<br/> A Round</h2>
+	</div>
+	<% end %>
+	
+	<br/ style="clear:both;">
+	
+	<div class="company_info">
+		<div class="label"><h2>Professional<br/>Info</h2></div>
+		<p><small>Company:</small><br/><strong><%= @player.company %></strong></p>
+		<p><small>Industry:</small><br/><strong><%= @player.industry %> </strong></p>
+		<p><small>Location:</small><br/><strong><%= @player.location %> </strong></p>
+	</div>
+	
+	<div class="player_notes">
+		<div class="label"><h2>Player<br/>Notes</h2></div>
+		<p><small>Home Course:</small><strong><br/> <%= Course.find_by_id(@player.home_course).name %> </strong></p>
+		<p><small>Preferred Tee-Time:</small><br/><strong><%= @player.schedule %> </strong></p>
+	</div>
+	<br/><br/>
+	
+	<div class="hero-unit center" style="clear:both;">
+		<h2>Recent Games</h2>
+	</div>
+	
+</div>

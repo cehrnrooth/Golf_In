@@ -1,0 +1,24 @@
+.courses {
+	border:1px solid #eee;
+	background: white;
+	height:127px;
+	margin-top:40px;
+	
+	.course_picture {
+		border:1px solid #fff;
+		margin:10px;
+		-moz-box-shadow: 0px 2px 2px 1px #aaa;
+		-webkit-box-shadow: 0px 2px 2px 1px #aaa;
+		box-shadow: 0px 2px 2px 1px #aaa;
+		
+	}
+	
+	h5 {color: black; margin-left:10px; font-size: 1.3em;}
+	
+	.course_stats {
+		float:right;
+		margin-top:10px;
+		margin-right:140px;
+	}
+	
+}
