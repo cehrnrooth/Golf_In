@@ -10,7 +10,7 @@ class CreateCourses < ActiveRecord::Migration
       t.string :city
       t.string :state
       t.string :zip
-      t.integer :phone
+      t.float :phone
       
       t.string :link
       t.text :description
