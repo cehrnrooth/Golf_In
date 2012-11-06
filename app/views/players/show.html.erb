@@ -14,9 +14,27 @@
 	</div>
 	
 	<% if !current_player?(@player) %>
-	<div class="label center" id="handicap" style="background: green">
-		<h2>Arrange<br/> A Round</h2>
+	<a href="#myModal" role="button" data-toggle="modal">
+		<div class="label center" id="handicap" style="background: green">
+			<h2>Arrange<br/> A Round</h2>
+		</div>
+	</a>
+
+	<!-- Modal -->
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h3 id="myModalLabel">Let's Play Golf!</h3>
+	  </div>
+	  <div class="modal-body">
+	    <p>Hey! I'll be in San Francisco next week. Noticed we're in the same industry. Would be great to play a round of golf and connect professionally. Let's play next Friday!</p>
+	  </div>
+	  <div class="modal-footer">
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+	    <button class="btn btn-primary">Send</button>
+	  </div>
 	</div>
+	
 	<% end %>
 	
 	<br/ style="clear:both;">
